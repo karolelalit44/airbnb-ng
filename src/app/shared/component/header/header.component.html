@@ -1,22 +1,64 @@
-<header class="navbar navbar-expand-lg">
+<div class="shadow-sm"> 
+<header class="navbar navbar-expand-lg navbar-light bg-white ">
     <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="assets/logo/airbnb.png" alt="Airbnb Logo" height="40" />
+        </a>
 
-    <a class="navbar-brand py-2 px-2" href="#">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <img src="assets/logo/airbnb.png" alt="Airbnb Logo" height="80" />
-
-    </a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-
-        <div class="d-flex align-items-center">
-            <button mat-button mat-raised-button color="primary"></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link fw-bold active" href="#">Stays</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Experiences</a>
+                </li>
+            </ul>
+            <div class="d-flex align-items-center ">
+                <span class="text-dark me-3 airbnbYh">Airbnb your home</span>
+                <i class="fas fa-globe text-secondary fs-5 mx-3"></i>
+                <div class="d-flex align-items-center border rounded-pill p-2">
+                    <i class="fas fa-bars me-2"></i>
+                    <i class="fas fa-user-circle fs-5 text-secondary"></i>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 </header>
+
+<!-- Search Section -->
+<section class="d-flex justify-content-center mt-2">
+    <div class="d-flex align-items-center rounded-pill bg-white p-1 custom-shadow" style="width: 800px; margin-bottom: 20px;">
+        <div class="d-flex w-100 mt-2">
+            <div class="capsule-item d-flex flex-column px-3 flex-grow-1">
+                <label class="fs-9 text-secondary search-bar-text-H">Where</label>
+                <span class="text-muted fs-9 search-bar-text-subH">Search Destinations</span>
+            </div>
+            <div class="border-start border-dark" style="height: 40px;"></div>
+            <div class="capsule-item d-flex flex-column px-3 flex-grow-1">
+                <label class="fs-9 text-secondary search-bar-text-H">Check in</label>
+                <span class="text-muted fs-9 search-bar-text-subH">Add dates</span>
+            </div>
+            <div class="border-start border-dark" style="height: 40px;"></div>
+            <div class="capsule-item d-flex flex-column px-3 flex-grow-1">
+                <label class="fs-9 text-secondary search-bar-text-H">Check out</label>
+                <span class="text-muted fs-9 search-bar-text-subH">Add dates</span>
+            </div>
+            <div class="border-start border-dark" style="height: 40px;"></div>
+            <div class="capsule-item d-flex flex-column px-3 flex-grow-1">
+                <label class="fs-9 text-secondary search-bar-text-H">Who</label>
+                <span class="text-muted fs-9 search-bar-text-subH">Add guests</span>
+            </div>
+            <button class="btn btn-danger rounded-circle p-2 ms-auto">
+                <i class="fas fa-search text-white"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+</div>
