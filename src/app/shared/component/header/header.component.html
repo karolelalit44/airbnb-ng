@@ -5,12 +5,12 @@
             <a class="navbar-brand" href="#">
                 <img src="assets/logo/airbnb.png" alt="Airbnb Logo" />
             </a>
-    
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto justify-content-center w-100">
                     <li class="nav-item">
@@ -24,13 +24,14 @@
                     <div class="capsule-item text-dark me-3 small" style="white-space: nowrap; font-size: 0.75rem;">
                         Airbnb your home
                     </div>
-    
+
                     <div class="capsule-item text-secondary mx-2" style="font-size: 0.9rem;">
                         <i class="fas fa-globe"></i>
                     </div>
-    
+
                     <!-- User Icon to trigger card -->
-                    <div class="capsule-item d-flex align-items-center border rounded-pill p-2 usericon" (click)="toggleCard()">
+                    <div class="capsule-item d-flex align-items-center border rounded-pill p-2 usericon"
+                        (click)="toggleCard()">
                         <i class="fas fa-bars me-2" style="font-size: 0.8rem;"></i>
                         <i class="fas fa-user-circle text-secondary" style="font-size: 1.5rem;"></i>
                     </div>
@@ -38,7 +39,7 @@
             </div>
         </div>
     </header>
-    
+
     <div class="card user-card" *ngIf="isUserCardOn">
         <div class="card-body">
             <ul class="list-unstyled">
@@ -51,7 +52,7 @@
             </ul>
         </div>
     </div>
-    
+
 
 
     <!-- Search Section -->
@@ -63,17 +64,17 @@
                     <label class="fs-9 text-secondary search-bar-text-H">Where</label>
                     <span class="text-muted fs-9 search-bar-text-subH">Search Destinations</span>
                 </div>
-                <div class="border-start border-dark" style="height: 40px;"></div>
+                <div class="border-start border-dark"></div>
                 <div class="capsule-item d-flex flex-column px-3 flex-grow-1">
                     <label class="fs-9 text-secondary search-bar-text-H">Check in</label>
                     <span class="text-muted fs-9 search-bar-text-subH">Add dates</span>
                 </div>
-                <div class="border-start border-dark" style="height: 40px;"></div>
+                <div class="border-start border-dark"></div>
                 <div class="capsule-item d-flex flex-column px-3 flex-grow-1">
                     <label class="fs-9 text-secondary search-bar-text-H">Check out</label>
                     <span class="text-muted fs-9 search-bar-text-subH">Add dates</span>
                 </div>
-                <div class="border-start border-dark" style="height: 40px;"></div>
+                <div class="border-start border-dark"></div>
                 <div class="capsule-item d-flex flex-column px-3 flex-grow-1">
                     <label class="fs-9 text-secondary search-bar-text-H">Who</label>
                     <span class="text-muted fs-9 search-bar-text-subH">Add guests</span>
