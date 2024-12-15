@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Apply Cereal font to all text globally */
+/* Apply Cereal font to all elements */
+* {
+    font-family: 'Cereal', sans-serif;
+}

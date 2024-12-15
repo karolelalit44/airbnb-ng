@@ -4,7 +4,6 @@ header {
 }
 
 section {
-    margin-top: 20px;
     padding: 10px 0;
 }
 
@@ -15,24 +14,25 @@ section {
     gap: 10px;
 }
 
-.d-flex.flex-column {
-    margin-bottom: 0.5rem;
-    margin-left: 10px;
-}
+
 
 button.ms-auto {
     margin-left: auto;
 }
 
-/* Capsule item and hover effect */
 .capsule-item {
-    transition: background-color 0.3s ease;
+    display: inline-flex;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    align-items: center;
 }
 
 .capsule-item:hover {
     background-color: #f0f0f0;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
 .capsule-item.selected {
@@ -74,6 +74,7 @@ button.btn-danger {
     align-items: center;
     border-radius: 50%;
     margin-right: 10px;
+    margin-top: 10px;
 }
 .navbar-nav .nav-item .nav-link {
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -84,4 +85,50 @@ button.btn-danger {
   
     border-radius: 20px;
     cursor: pointer;
+}
+
+.usericon{
+
+    padding: 0.5rem 1rem;
+}
+
+/* styles.css */
+.navbar-brand img {
+    height: 60px;
+    width: auto;
+}
+
+
+.user-card ul {
+    padding: 0;
+    margin: 0;
+}.user-card ul li a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.875rem;
+}
+
+.user-card ul li a:hover {
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    cursor: pointer;
+
+}.user-card hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 8px 0;
+}.user-card.show {
+    display: block;
+}.user-card {
+    position: absolute;
+    top: 80px; /* Adjust depending on your navbar height */
+    right: 20px; /* Position the card next to the user icon */
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: gives a shadow effect to the card */
+    background-color: white;
+    border-radius: 8px;
+    z-index: 9999;
+
 }
