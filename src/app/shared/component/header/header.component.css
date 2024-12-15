@@ -121,14 +121,25 @@ button.btn-danger {
     margin: 8px 0;
 }.user-card.show {
     display: block;
-}.user-card {
+}
+
+.user-card {
     position: absolute;
-    top: 80px; /* Adjust depending on your navbar height */
-    right: 20px; /* Position the card next to the user icon */
-    width: 200px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: gives a shadow effect to the card */
+    right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: white;
     border-radius: 8px;
     z-index: 9999;
+}
 
+@media (min-width: 768px) {
+    .user-card {
+        right: 250px;
+    }
+}
+
+@media (max-width: 1767px) {
+    .user-card {
+        right: 20px;
+    }
 }
