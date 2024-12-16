@@ -3,10 +3,6 @@ header {
     position: relative;
 }
 
-section {
-    padding: 10px 0;
-}
-
 
 .d-flex.justify-content-center {
     display: flex;
@@ -143,3 +139,5 @@ button.btn-danger {
         right: 20px;
     }
 }
+
+

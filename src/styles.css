@@ -3,5 +3,6 @@
 /* Apply Cereal font to all text globally */
 /* Apply Cereal font to all elements */
 * {
-    font-family: 'Cereal', sans-serif;
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
+

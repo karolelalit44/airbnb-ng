@@ -5,31 +5,33 @@
             <a class="navbar-brand" href="#">
                 <img src="assets/logo/airbnb.png" alt="Airbnb Logo" />
             </a>
-
+    
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
+    
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto justify-content-center w-100">
-                    <li class="nav-item">
-                        <div class="nav-link fw-bold active">Stays</div>
+                    <li class="nav-item" (click)="setActive('stays')">
+                        <div class="nav-link" [ngClass]="{'fw-bold': activeItem === 'stays'}">Stays</div>
                     </li>
-                    <li class="nav-item">
-                        <div class="nav-link">Experiences</div>
+                    <li class="nav-item" (click)="setActive('experiences')">
+                        <div class="nav-link" [ngClass]="{'fw-bold': activeItem === 'experiences'}">Experiences</div>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center">
                     <div class="capsule-item text-dark me-3 small" style="white-space: nowrap; font-size: 0.75rem;">
                         Airbnb your home
                     </div>
-
-                    <div class="capsule-item text-secondary mx-2" style="font-size: 0.9rem;">
+    
+                    <div class="capsule-item text-secondary mx-2" style="font-size: 0.9rem;" (click)="openSetRegionModal()">
                         <i class="fas fa-globe"></i>
-                    </div>
+                      </div>
+                      
+                      <app-set-region *ngIf="isSetRegionModalOpen" (close)="closeSetRegionModal()"></app-set-region>
+                      
 
-                    <!-- User Icon to trigger card -->
                     <div class="capsule-item d-flex align-items-center border rounded-pill p-2 usericon"
                         (click)="toggleCard()">
                         <i class="fas fa-bars me-2" style="font-size: 0.8rem;"></i>
@@ -65,15 +67,23 @@
                     <span class="text-muted fs-9 search-bar-text-subH">Search Destinations</span>
                 </div>
                 <div class="border-start border-dark"></div>
+    
                 <div class="capsule-item d-flex flex-column px-3 flex-grow-1">
-                    <label class="fs-9 text-secondary search-bar-text-H">Check in</label>
+                    <label class="fs-9 text-secondary search-bar-text-H">
+                        <ng-container *ngIf="activeItem === 'experiences'; else checkInOut">
+                            Date
+                        </ng-container>
+                        <ng-template #checkInOut>Check in</ng-template>
+                    </label>
                     <span class="text-muted fs-9 search-bar-text-subH">Add dates</span>
                 </div>
                 <div class="border-start border-dark"></div>
-                <div class="capsule-item d-flex flex-column px-3 flex-grow-1">
+    
+                <div class="capsule-item d-flex flex-column px-3 flex-grow-1" *ngIf="activeItem === 'stays'">
                     <label class="fs-9 text-secondary search-bar-text-H">Check out</label>
                     <span class="text-muted fs-9 search-bar-text-subH">Add dates</span>
                 </div>
+    
                 <div class="border-start border-dark"></div>
                 <div class="capsule-item d-flex flex-column px-3 flex-grow-1">
                     <label class="fs-9 text-secondary search-bar-text-H">Who</label>
