@@ -1,101 +1,119 @@
 <div class="shadow-sm">
-
-    <header class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets/logo/airbnb.png" alt="Airbnb Logo" />
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto justify-content-center w-100">
-                    <li class="nav-item" (click)="setActive('stays')">
-                        <div class="nav-link" [ngClass]="{'fw-bold': activeItem === 'stays'}">Stays</div>
-                    </li>
-                    <li class="nav-item" (click)="setActive('experiences')">
-                        <div class="nav-link" [ngClass]="{'fw-bold': activeItem === 'experiences'}">Experiences</div>
-                    </li>
-                </ul>
-                <div class="d-flex align-items-center">
-                    <div class="capsule-item text-dark me-3 small"  [routerLink]="'/host-home'" style="white-space: nowrap; font-size: 0.75rem;">
-                        Airbnb your home
-                    </div>
-
-                    <div class="capsule-item text-secondary mx-2" style="font-size: 0.9rem;"
-                        (click)="openSetRegionModal()">
-                        <i class="fas fa-globe"></i>
-                    </div>
-
-                    <app-set-region *ngIf="isSetRegionModalOpen" (close)="closeSetRegionModal()"></app-set-region>
-
-
-                    <div class="capsule-item d-flex align-items-center border rounded-pill p-2 usericon"
-                        (click)="toggleCard($event)">
-                        <i class="fas fa-bars me-2" style="font-size: 0.8rem;"></i>
-                        <i class="fas fa-user-circle text-secondary" style="font-size: 1.5rem;"></i>
+    <!-- Large Screen Header -->
+    <div class="largeScreenHeader d-none d-lg-block">
+        <header class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/logo/airbnb.png" alt="Airbnb Logo" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto justify-content-center w-100">
+                        <li class="nav-item" (click)="setActive('stays')">
+                            <div class="nav-link" [ngClass]="{'fw-bold': activeItem === 'stays'}">Stays</div>
+                        </li>
+                        <li class="nav-item" (click)="setActive('experiences')">
+                            <div class="nav-link" [ngClass]="{'fw-bold': activeItem === 'experiences'}">Experiences
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <div class="capsule-item text-dark me-3 small" [routerLink]="'/host-home'"
+                            style="white-space: nowrap; font-size: 0.75rem;">
+                            Airbnb your home
+                        </div>
+                        <div class="capsule-item text-secondary mx-2" style="font-size: 0.9rem;"
+                            (click)="openSetRegionModal()">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <app-set-region *ngIf="isSetRegionModalOpen" (close)="closeSetRegionModal()"></app-set-region>
+                        <div class="capsule-item d-flex align-items-center border rounded-pill p-2 usericon"
+                            (click)="toggleCard($event)">
+                            <i class="fas fa-bars me-2" style="font-size: 0.8rem;"></i>
+                            <i class="fas fa-user-circle text-secondary" style="font-size: 1.5rem;"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <div class="card user-card" *ngIf="isUserCardOn">
-        <div class="card-body">
-            <ul class="list-unstyled">
-                <li><a href="#">Signup</a></li>
-                <li><a href="#">Login</a></li>
-                <hr class="my-2" />
-                <li><a href="#">Airbnb your home</a></li>
-                <li><a href="#">Host an experience</a></li>
-                <li><a href="#">Help Centre</a></li>
-            </ul>
+        <div class="card user-card" *ngIf="isUserCardOn">
+            <div class="card-body">
+                <ul class="list-unstyled">
+                    <li><a href="#">Signup</a></li>
+                    <li><a href="#">Login</a></li>
+                    <hr class="my-2" />
+                    <li><a href="#">Airbnb your home</a></li>
+                    <li><a href="#">Host an experience</a></li>
+                    <li><a href="#">Help Centre</a></li>
+                </ul>
+            </div>
         </div>
+
+        <!-- Search Section -->
+        <section class="d-flex justify-content-center">
+            <div class="d-flex align-items-center rounded-pill bg-white p-1 custom-shadow"
+                style="width: 800px; margin-bottom: 20px;">
+                <div class="d-flex w-100">
+                    <div class="capsule-item d-flex flex-column px-2 flex-grow-1">
+                        <label class="fs-9 text-secondary search-bar-text-H">Where</label>
+                        <span class="text-muted fs-9 search-bar-text-subH">Search Destinations</span>
+                    </div>
+                    <div class="border-start border-dark"></div>
+
+                    <div class="capsule-item d-flex flex-column px-3 flex-grow-1">
+                        <label class="fs-9 text-secondary search-bar-text-H">
+                            <ng-container *ngIf="activeItem === 'experiences'; else checkInOut">
+                                Date
+                            </ng-container>
+                            <ng-template #checkInOut>Check in</ng-template>
+                        </label>
+                        <span class="text-muted fs-9 search-bar-text-subH">Add dates</span>
+                    </div>
+                    <div class="border-start border-dark"></div>
+
+                    <div class="capsule-item d-flex flex-column px-3 flex-grow-1" *ngIf="activeItem === 'stays'">
+                        <label class="fs-9 text-secondary search-bar-text-H">Check out</label>
+                        <span class="text-muted fs-9 search-bar-text-subH">Add dates</span>
+                    </div>
+
+                    <div class="border-start border-dark"></div>
+                    <div class="capsule-item d-flex flex-column px-3 flex-grow-1">
+                        <label class="fs-9 text-secondary search-bar-text-H">Who</label>
+                        <span class="text-muted fs-9 search-bar-text-subH">Add guests</span>
+                    </div>
+                    <button class="btn btn-danger rounded-circle p-2 ms-auto">
+                        <i class="fas fa-search text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
     </div>
 
+    <!-- Small Screen Header -->
+    <div class="smallScreenHeader d-lg-none mt-2 shadow-sm bg-white">
+        <header class="navbar navbar-light px-2 mb">
+            <div class="d-flex container-fluid m-2 align-items-center justify-content-between">
+                <div class="flex-grow-2 mx-4">
+                    <div class="input-group py-2 align-items-center rounded-pill">
+                        <span class="input-group-text bg-danger text-white rounded-circle">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input type="text" class="form-control border-0 text-center px-2"
+                            placeholder="Start your search">
+                    </div>
 
-
-    <!-- Search Section -->
-    <section class="d-flex justify-content-center">
-        <div class="d-flex align-items-center rounded-pill bg-white p-1 custom-shadow"
-            style="width: 800px; margin-bottom: 20px;">
-            <div class="d-flex w-100">
-                <div class="capsule-item d-flex flex-column px-2 flex-grow-1">
-                    <label class="fs-9 text-secondary search-bar-text-H">Where</label>
-                    <span class="text-muted fs-9 search-bar-text-subH">Search Destinations</span>
                 </div>
-                <div class="border-start border-dark"></div>
-
-                <div class="capsule-item d-flex flex-column px-3 flex-grow-1">
-                    <label class="fs-9 text-secondary search-bar-text-H">
-                        <ng-container *ngIf="activeItem === 'experiences'; else checkInOut">
-                            Date
-                        </ng-container>
-                        <ng-template #checkInOut>Check in</ng-template>
-                    </label>
-                    <span class="text-muted fs-9 search-bar-text-subH">Add dates</span>
+                <div>
+                    <button
+                        class="btn btn-light border rounded-circle p-2 d-flex justify-content-center align-items-center">
+                        <i class="fas fa-filter"></i>
+                    </button>
                 </div>
-                <div class="border-start border-dark"></div>
-
-                <div class="capsule-item d-flex flex-column px-3 flex-grow-1" *ngIf="activeItem === 'stays'">
-                    <label class="fs-9 text-secondary search-bar-text-H">Check out</label>
-                    <span class="text-muted fs-9 search-bar-text-subH">Add dates</span>
-                </div>
-
-                <div class="border-start border-dark"></div>
-                <div class="capsule-item d-flex flex-column px-3 flex-grow-1">
-                    <label class="fs-9 text-secondary search-bar-text-H">Who</label>
-                    <span class="text-muted fs-9 search-bar-text-subH">Add guests</span>
-                </div>
-                <button class="btn btn-danger rounded-circle p-2 ms-auto">
-                    <i class="fas fa-search text-white"></i>
-                </button>
             </div>
-        </div>
-    </section>
-
-
+        </header>
+    </div>
 </div>
