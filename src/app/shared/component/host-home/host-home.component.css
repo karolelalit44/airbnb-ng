@@ -1,0 +1,11 @@
+/* Map Section Custom Styling */
+.rate-badge {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  /* Progress Bar */
+  .progress-bar {
+    border-radius: 10px;
+  }
+  

@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { SetRegionComponent } from '../../modals/set-region/set-region.component';
+import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports:[CommonModule, SetRegionComponent],
+  imports:[CommonModule, SetRegionComponent, RouterLink,RouterModule],
   standalone: true,
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
