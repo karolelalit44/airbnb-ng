@@ -5,7 +5,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports:[CommonModule, SetRegionComponent, RouterLink,RouterModule],
+  imports: [CommonModule, SetRegionComponent, RouterLink, RouterModule],
   standalone: true,
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
@@ -38,12 +38,10 @@ export class HeaderComponent {
 
   @HostListener('document:click', ['$event'])
   onClick(event: MouseEvent) {
-    const userCardElement = document.querySelector('.usericon'); // Get the user card element
-    const userCardContent = document.querySelector('.user-card'); // Get the content of the user card
-
-    // Check if the click happened outside the user card (and the card is open)
+    const userCardElement = document.querySelector('.usericon');
+    const userCardContent = document.querySelector('.user-card'); 
     if (userCardElement && !userCardElement.contains(event.target as Node) && this.isUserCardOn) {
-      this.isUserCardOn = false; // Close the card if clicked outside
+      this.isUserCardOn = false;
     }
   }
   
