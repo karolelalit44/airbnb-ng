@@ -1,0 +1,36 @@
+<div class="property-category-container">
+  <div class="d-flex align-items-center justify-content-between w-100">
+
+    <div class="taxes-container card">
+      <div class="card-body d-flex align-items-center">
+        <label for="totalBeforeTaxes" class="mr-2">Display Total Before Taxes</label>
+        <label class="switch">
+          <input type="checkbox" id="totalBeforeTaxes" class="toggle-switch" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <button class="btn btn-border text-dark rounded-circle mr-3">
+      <i class="fa fa-arrow-left"></i>
+    </button>
+
+    <div class="house-icons">
+      <!-- Use *ngFor to loop through propertyIcons -->
+      <div class="property-icon" *ngFor="let icon of propertyIcons">
+        <img [src]="icon.imgUrl" [alt]="icon.name" class="property-img">
+        <div class="property-name">{{ icon.name }}</div>
+      </div>
+    </div>
+
+
+    <button class="btn btn-border text-dark rounded-circle mr-3">
+      <i class="fa fa-arrow-right"></i>
+    </button>
+
+    <button class="btn btn-border text-dark d-flex align-items-center">
+      <i class="fa fa-filter mr-2"></i> Filters
+    </button>
+
+  </div>
+</div>
