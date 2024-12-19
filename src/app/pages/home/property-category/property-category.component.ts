@@ -21,7 +21,32 @@ export class PropertyCategoryComponent {
     { imgUrl: 'https://a0.muscache.com/im/pictures/mediaverse/category_icon/original/3e5243c8-4d15-4c6b-97e3-7ba2bb7bb880.png', name: 'Icons' },
     { imgUrl: 'https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg', name: 'Farms' },
     { imgUrl: 'https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg', name: 'Cabins' },
-    { imgUrl: 'https://a0.muscache.com/pictures/c0a24c04-ce1f-490c-833f-987613930eca.jpg', name: 'National Parks' }
+    { imgUrl: 'https://a0.muscache.com/pictures/c0a24c04-ce1f-490c-833f-987613930eca.jpg', name: 'National Parks' },
+    { imgUrl: 'https://a0.muscache.com/pictures/3271df99-f071-4ecf-9128-eb2d2b1f50f0.jpg', name: 'Tiny Homes' },
+    { imgUrl: 'https://a0.muscache.com/pictures/8e507f16-4943-4be9-b707-59bd38d56309.jpg', name: 'Islands' },
+    { imgUrl: 'https://a0.muscache.com/pictures/6ad4bd95-f086-437d-97e3-14d12155ddfe.jpg', name: 'Countryside' },
+    { imgUrl: 'https://a0.muscache.com/pictures/33dd714a-7b4a-4654-aaf0-f58ea887a688.jpg', name: 'Historical Homes' },
+    { imgUrl: 'https://a0.muscache.com/pictures/78ba8486-6ba6-4a43-a56d-f556189193da.jpg', name: 'Mansions' },
+
+
   ];
 
+  currentIndex: number = 0;
+  iconsPerPage: number = 8;
+
+  get displayedIcons() {
+    return this.propertyIcons.slice(this.currentIndex, this.currentIndex + this.iconsPerPage);
+  }
+
+  next() {
+    if (this.currentIndex + this.iconsPerPage < this.propertyIcons.length) {
+      this.currentIndex += this.iconsPerPage;
+    }
+  }
+
+  prev() {
+    if (this.currentIndex - this.iconsPerPage >= 0) {
+      this.currentIndex -= this.iconsPerPage;
+    }
+  }
 }

@@ -11,22 +11,24 @@
       </div>
     </div>
 
-    <button class="btn btn-border text-dark rounded-circle mr-3">
-      <i class="fa fa-arrow-left"></i>
-    </button>
+    <div class="browse-property">
+      <button class="btn btn-border text-dark rounded-circle mr-3" (click)="prev()">
+        <i class="fa fa-arrow-left"></i>
+      </button>
 
-    <div class="house-icons">
-      <!-- Use *ngFor to loop through propertyIcons -->
-      <div class="property-icon" *ngFor="let icon of propertyIcons">
-        <img [src]="icon.imgUrl" [alt]="icon.name" class="property-img">
-        <div class="property-name">{{ icon.name }}</div>
+      <div class="house-icons">
+        <div class="property-icon" *ngFor="let icon of displayedIcons">
+          <img [src]="icon.imgUrl" [alt]="icon.name" class="property-img">
+          <div class="property-name">{{ icon.name }}</div>
+        </div>
       </div>
+
+
+      <button class="btn btn-border text-dark rounded-circle mr-3" (click)="next()">
+        <i class="fa fa-arrow-right"></i>
+      </button>
     </div>
 
-
-    <button class="btn btn-border text-dark rounded-circle mr-3">
-      <i class="fa fa-arrow-right"></i>
-    </button>
 
     <button class="btn btn-border text-dark d-flex align-items-center">
       <i class="fa fa-filter mr-2"></i> Filters
