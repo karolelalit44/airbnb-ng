@@ -55,3 +55,21 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+
+.placeholder {
+    background-color: #f0f0f0;
+    height: 200px; /* Adjust according to your design */
+  }
+  
+  .guest-favourite {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+
+  

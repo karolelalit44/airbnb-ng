@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-3" *ngFor="let property of properties">
+    <div class="col-md-3" *ngFor="let property of displayedProperties">
       <div class="card mb-4">
         <div class="card-img-top placeholder">
           <div class="guest-favourite">Guest favourite</div>
@@ -17,4 +17,10 @@
       </div>
     </div>
   </div>
+  
+  <div *ngIf="properties.length > displayedProperties.length" infiniteScroll
+    [infiniteScrollDistance]="scrollDistance"
+    (scrolled)="loadMore()">
+</div>
+
 </div>

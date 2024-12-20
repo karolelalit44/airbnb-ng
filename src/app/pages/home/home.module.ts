@@ -5,7 +5,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { PropertyCategoryComponent } from './property-category/property-category.component';
 import { PropertyListComponent } from './property-list/property-list.component';
 import { HomeComponent } from './home.component';
-
+import { InfiniteScrollDirective } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { HomeComponent } from './home.component';
     PropertyListComponent
   ],
   imports: [
-
+    InfiniteScrollDirective ,
     CommonModule,
     HomeRoutingModule,
     SharedModule,
