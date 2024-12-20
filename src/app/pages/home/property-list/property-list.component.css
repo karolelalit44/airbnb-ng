@@ -1,20 +1,13 @@
 /* property-list.component.css */
-.placeholder {
+.propertylist {
     background-color: #eee;
-    /* Light gray background */
     height: 200px;
-    /* Fixed height for placeholders */
     display: flex;
     align-items: flex-start;
-    /* Align "Guest favourite" to the top */
     justify-content: flex-start;
-    /* Align "Guest favourite" to the left */
     position: relative;
-    /* Needed for absolute positioning of the text */
     border-radius: 0.375rem;
-    /* Match card border radius */
     overflow: hidden;
-    /* Ensure text doesn't overflow */
 }
 
 .guest-favourite {
@@ -32,44 +25,48 @@
     border-top-right-radius: 0.375rem;
 }
 
-.card {
-    border: none;
-    /* Remove default card border */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
-    /* Add a subtle shadow */
-    border-radius: 0.375rem;
-}
 
-.card-title {
-    font-size: 1rem;
-    /* Adjust font size as needed */
-    margin-bottom: 0.25rem;
-}
 
 .card-text {
     font-size: smaller;
     margin-bottom: 0.25rem;
 }
 
-.container {
-    padding-top: 20px;
-    padding-bottom: 20px;
+
+
+.propertylist {
+    background-color: #f0f0f0;
+    height: 200px;
+    border-radius: 1.2rem;
 }
 
-
-.placeholder {
-    background-color: #f0f0f0;
-    height: 200px; /* Adjust according to your design */
-  }
-  
-  .guest-favourite {
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
+.guest-favourite {
+    background: white;
+    color: #000000;
     padding: 5px;
     position: absolute;
     top: 10px;
     left: 10px;
-  }
-  
+    border-radius: 10px;
+}
 
-  
+
+
+.card-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+}
+
+
+.property-list-container {
+
+    width: 100%;
+}
+
+
+.card {
+    border: none;
+    /* box-shadow: 0 2px 2px rgba(0, 0, 0, .1); */
+    border-radius: 0.375rem;
+}

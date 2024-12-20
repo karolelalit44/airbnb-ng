@@ -1,7 +1,7 @@
-.property-category-container {
-  padding: 20px;
+
+.property-category-container{
+  padding: 10px 25px;
   width: 100%;
-  border: 1px solid #ececec;
 }
 
 .d-flex {
@@ -103,7 +103,7 @@ input:checked+.slider:before {
   display: flex;
   justify-content: space-around;
   flex-grow: 1;
-  gap: 10px;
+  /* gap: 10px; */
   overflow-x: auto;
 }
 

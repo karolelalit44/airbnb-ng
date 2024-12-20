@@ -19,7 +19,7 @@ import { InfiniteScrollDirective } from 'ngx-infinite-scroll';
     RouterModule,
     AppRoutingModule,
     SharedModule,
-    HomeModule
+    HomeModule,
   ],
   providers: [],
 

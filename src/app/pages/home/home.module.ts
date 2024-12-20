@@ -6,14 +6,17 @@ import { PropertyCategoryComponent } from './property-category/property-category
 import { PropertyListComponent } from './property-list/property-list.component';
 import { HomeComponent } from './home.component';
 import { InfiniteScrollDirective } from 'ngx-infinite-scroll';
+import { TruncatePipe } from '../../truncate/truncate.pipe';
 
 @NgModule({
   declarations: [
     HomeComponent,
     PropertyCategoryComponent,
-    PropertyListComponent
+    PropertyListComponent,
+    TruncatePipe
   ],
   imports: [
+    
     InfiniteScrollDirective ,
     CommonModule,
     HomeRoutingModule,
