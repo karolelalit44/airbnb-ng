@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let property of properties">
+      <div class="card mb-4">
+        <div class="card-img-top placeholder">
+          <div class="guest-favourite">Guest favourite</div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ property.location }}</h5>
+          <div class="d-flex align-items-center mb-2">
+            <span *ngIf="property.rating > 0" class="me-1">★{{ property.rating }}</span>
+            <small class="text-muted" *ngIf="property.distance">{{ property.distance }}</small>
+          </div>
+          <p class="card-text" *ngIf="property.dates">{{ property.dates }}</p>
+          <p class="card-text">{{ property.price }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
