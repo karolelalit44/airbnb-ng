@@ -6,7 +6,7 @@ import { PropertyCategoryComponent } from './property-category/property-category
 import { PropertyListComponent } from './property-list/property-list.component';
 import { HomeComponent } from './home.component';
 import { InfiniteScrollDirective } from 'ngx-infinite-scroll';
-import { TruncatePipe } from '../../truncate/truncate.pipe';
+import { TruncatePipe } from '../../shared/pipes/truncate/truncate.pipe';
 import { BottomNavBarComponent } from '../../shared/component/bottom-nav-bar/bottom-nav-bar.component';
 import { HeaderComponent } from '../../shared/component/header/header.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
