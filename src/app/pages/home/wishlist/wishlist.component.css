@@ -1,0 +1,33 @@
+.wishlist-container {
+  text-align: left;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.wishlist-container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.wishlist-container p {
+  margin-bottom: 1.5rem;
+  color: #555;
+  font-weight: normal;
+}
+
+.login-button {
+  background-color: #e91e63;
+  border-color: #e91e63;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+.login-button:hover {
+  background-color: #c2185b;
+  border-color: #c2185b;
+}
+
+
+@media (max-width: 767.98px) {}

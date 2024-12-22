@@ -110,6 +110,20 @@
 
 }
 
-.show_more{
+.show_more {
     font-size: 1.3rem;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .property-list-container {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+
 }

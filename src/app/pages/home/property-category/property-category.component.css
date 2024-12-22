@@ -1,7 +1,13 @@
 .property-category-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
   padding: 10px 50px;
   width: 100%;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 }
+
 
 .d-flex {
   display: flex;
@@ -103,16 +109,17 @@ input:checked+.slider:before {
   display: flex;
   justify-content: space-around;
   flex-grow: 1;
-  /* gap: 10px; */
+
   overflow-x: auto;
   cursor: pointer;
-}
 
-.property-icon {
   text-align: center;
   position: relative;
   flex-shrink: 0;
+
 }
+
+.property-icon {}
 
 .property-img {
   width: 25px;
@@ -168,7 +175,7 @@ input:checked+.slider:before {
 
 .next-prev-button {
   border: none;
-  /* background-color: #4CAF50; */
+
   color: white;
   padding: 12px 20px;
   border-radius: 25px;
@@ -197,5 +204,45 @@ input:checked+.slider:before {
 
   to {
     opacity: 1;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .taxes-container {
+    display: none;
+  }
+
+  .rounded-circle {
+    display: none;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .property-category-container {
+    padding: 10px 10px;
+  }
+
+  .house-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 25px;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .filter_btn {
+    display: none;
+  }
+
+  .house-icons::-webkit-scrollbar {
+    display: none;
+  }
+
+  .property-category-container .filter_btn {
+    display: none !important;
   }
 }
