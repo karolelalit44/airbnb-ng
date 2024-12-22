@@ -7,21 +7,28 @@ import { PropertyListComponent } from './property-list/property-list.component';
 import { HomeComponent } from './home.component';
 import { InfiniteScrollDirective } from 'ngx-infinite-scroll';
 import { TruncatePipe } from '../../truncate/truncate.pipe';
+import { BottomNavBarComponent } from '../../shared/component/bottom-nav-bar/bottom-nav-bar.component';
+import { HeaderComponent } from '../../shared/component/header/header.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
+import { SetRegionComponent } from '../../shared/modals/set-region/set-region.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
+    HeaderComponent,
+    SetRegionComponent,
+    WishlistComponent,
     PropertyCategoryComponent,
     PropertyListComponent,
-    TruncatePipe
+    TruncatePipe,
+    BottomNavBarComponent,
   ],
   imports: [
-    
-    InfiniteScrollDirective ,
+    InfiniteScrollDirective,
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-
-  ]
+    
+]
 })
 export class HomeModule { }
