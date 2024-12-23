@@ -11,6 +11,7 @@ import { BottomNavBarComponent } from '../../shared/component/bottom-nav-bar/bot
 import { HeaderComponent } from '../../shared/component/header/header.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { SetRegionComponent } from '../../shared/modals/set-region/set-region.component';
+import { FooterComponent } from '../../shared/component/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { SetRegionComponent } from '../../shared/modals/set-region/set-region.co
     PropertyListComponent,
     TruncatePipe,
     BottomNavBarComponent,
+    FooterComponent
   ],
   imports: [
     InfiniteScrollDirective,

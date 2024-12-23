@@ -1,0 +1,33 @@
+footer.footer {
+    button.btn-link {
+      font-size: 0.9rem;
+      font-weight: 600;
+      &.text-dark {
+        border-bottom: 2px solid #000;
+      }
+    }
+  
+    h6 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  
+    ul li a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  
+    .footer-bottom {
+      .text-muted {
+        font-size: 0.8rem;
+      }
+  
+      i {
+        font-size: 1rem;
+      }
+    }
+  }
+  
+  
+  
