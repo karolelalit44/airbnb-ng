@@ -1,33 +1,83 @@
 footer.footer {
-    button.btn-link {
-      font-size: 0.9rem;
-      font-weight: 600;
-      &.text-dark {
-        border-bottom: 2px solid #000;
+    font-family: "Airbnb Cereal", sans-serif;
+    font-size: 18px;
+  
+    .airbnb-footer-property {
+      h2 {
+        font-size: 20px;
+        letter-spacing: 0.2px;
+        margin-bottom: 20px;
+      }
+  
+      .btn-link {
+        font-size: 16px;
+        color: #717171;
+  
+        &.text-dark {
+          font-weight: bold;
+        }
+  
+        &:hover {
+          text-decoration: none;
+        }
+      }
+  
+      h6 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+  
+      p {
+        font-size: 14px;
+        color: #717171;
       }
     }
   
-    h6 {
-      font-size: 1rem;
-      font-weight: 600;
-    }
+    .airbnb-footer-menu {
+      h6 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
   
-    ul li a {
-      &:hover {
-        text-decoration: underline;
+      ul {
+        padding: 0;
+        list-style: none;
+  
+        li {
+          margin-bottom: 10px;
+  
+          a {
+            font-size: 16px;
+            color: #717171;
+            text-decoration: none;
+  
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
       }
     }
   
-    .footer-bottom {
+    .airbnb-footer-info {
+      border-top: 1px solid #ddd;
+      padding-top: 15px;
+  
       .text-muted {
-        font-size: 0.8rem;
+        font-size: 12px;
+  
+        a {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
   
       i {
-        font-size: 1rem;
+        font-size: 16px;
       }
     }
   }
-  
-  
   
